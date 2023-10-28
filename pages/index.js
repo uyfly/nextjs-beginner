@@ -4,6 +4,8 @@ import EventList from "@/components/events/event-list";
 import path from "path";
 import fs from "fs/promises";
 
+import Link from "next/link";
+
 function HomePage(props) {
   const featuredEvents = getFeaturedEvents();
 
@@ -14,7 +16,9 @@ function HomePage(props) {
       <EventList items={featuredEvents} />
       <ul>
         {products.map((product) => (
-          <li key={product.id}>{product.title}</li>
+          <li key={product.id}>
+            <Link href={`/${product.id}`}>{product.title}</Link>
+          </li>
         ))}
       </ul>
     </div>
