@@ -5,6 +5,7 @@ function NotFoundPage() {
       <h2>Study off day</h2>
       <ul>
         <li>2023-11-03</li>
+        <li>2023-11-07</li>
       </ul>
     </div>
   );
